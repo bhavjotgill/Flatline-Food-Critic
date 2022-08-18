@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fa4 Web developement project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ff9ce8e0cb.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg" alt="logo/profile pic">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-section">Services</a></li>
+            <li class="item"><a href="#client-section">Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+            <!-- <li class="item"><a href="#">Privacy Policy</a></li> -->
+        </ul>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text"  placeholder="Search" id="search-input">
+            <i class="fas fa-microphone"></i>
+        </div>
+
+        <div>
+            <i class="fas fa-adjust  fa-lg" id="adjust"></i>
+            
+        </div>
+
+        <ul id="right-bt">
+            <li id="login" class="item"><a onclick="login()" target="_parent">Login</a></li>
+            <li class="item"><a onclick="signup()">Sign Up</a></li>
+        </ul>
+        <!-- <div id="right-buttons" style="background-color: black; padding: 5px;">
+            <button type="button" class="bt1"><a href="login.html">Login</a></button>
+            <button type="button" class="bt1"><a href="signup.html">Sign Up</a></button>
+        </div> -->
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary"><span class="color-change">Welcome to Flatline Food Critic</span></h1>
+        <p>Dear guests, you are welcomed to dine with us at Good Food restaurant.</p>
+        <!-- <p>Have a pleasant dining experience.</p> -->
+        <p> We will serve you with the mouth watering dishes.</p>
+        <p>Enjoy your food by ordering from our website. Have a pleasant dining experience and have fun. Also we will deliever free if you order above Rs. 500</p>
+        <button type="button" class="bt" onclick="ordernow()">Order Now</button>
+    </section>
+
+    <section id="services-section">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="food.png" alt="Food Catering">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Our goal is to offer great homemade food at a reasonable price while maintaining great quality and service. Enjoy a selection of appetizers, sandwiches, fresh seafood, steak, pastas, fresh salads, homemade desserts and daily specials, including everything from classic favorites to modern cuisine. We offer a full bar.</p>
+                <!-- <p class="center">Labore, tempore error iusto obcaecati mollitia laborum distinctio deleniti beatae repellendus nesciunt earum doloribus in. Eum numquam cumque velit nulla aliquid explicabo quia labore! Laboriosam similique facilis numquam ipsa molestiae adipisci cum enim, ut, animi quae repudiandae esse maiores veniam sed.</p> -->
+            </div>
+            <div class="box">
+                <img src="bulk.png" alt="Bulk Ordering">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p>With a warm welcome message for a website, you can win your visitors and convince them to explore your website. So, you need to focus on creating a message that compels users to stay on your site longer than a few seconds. Here is how REVE Chat sends a well informed and timely proactive triggered message to its website visitors.</p>
+                <!-- <p class="center">Labore, tempore error iusto obcaecati mollitia laborum distinctio deleniti beatae repellendus nesciunt earum doloribus in. Eum numquam cumque velit nulla aliquid explicabo quia labore! Laboriosam similique facilis numquam ipsa molestiae adipisci cum enim, ut, animi quae repudiandae esse maiores veniam sed.</p> -->
+            </div>
+            <div class="box">
+                <img src="delievery.png" alt="food Ordering">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Welcome emails have 86% higher open rates and engagement than other marketing emails.  They give better clarity about the brand to the users and reassure the impression they hold about your business. Once food delievered from us means a lot. Try once if you didnot like our service report our website. Thanking You</p>
+                <!-- <p class="center">Labore, tempore error iusto obcaecati mollitia laborum distinctio deleniti beatae repellendus nesciunt earum doloribus in. Eum numquam cumque velit nulla aliquid explicabo quia labore! Laboriosam similique facilis numquam ipsa molestiae adipisci cum enim, ut, animi quae repudiandae esse maiores veniam sed.</p> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap Carousel -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="carousel/1crop.jpg" alt="Los Angeles" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+        <img src="carousel/2crop.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+        <img src="carousel/3crop.jpg" alt="New York" width="1100" height="500">
+        </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+    </div>
+<!--  -->
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="sponsers OR clients/google.png" alt="google">
+            </div>
+            <div class="client-item">
+                <img src="sponsers OR clients/microsoft.png" alt="microsoft">
+            </div>
+            <div class="client-item">
+                <img src="sponsers OR clients/apple.png" alt="apple">
+            </div>
+            <div class="client-item">
+                <img src="sponsers OR clients/cocacola.png" alt="Coca Cola">
+            </div>
+            <div class="client-item">
+                <img src="sponsers OR clients/adidas.png" alt="adidas">
+            </div>
+        </div>
+        <div id="clients2">
+            <div class="client2-item">
+                <img src="sponsers OR clients/zomato.png" alt="zomato">
+            </div>
+            <div class="client2-item">
+                <img src="sponsers OR clients/swiggy.png" alt="swiggy">
+            </div>
+            <div class="client2-item">
+                <img src="sponsers OR clients/mcd.png" alt="McD">
+            </div>
+            <div class="client2-item">
+                <img src="sponsers OR clients/burgerking.png" alt="Burger king">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+            <div id="contact-box">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input class="pqr" type="text" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input class="pqr" type="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Phonenumber">Phone-Number:</label>
+                        <input class="pqr" type="number" name="Phonenumber" placeholder="Enter your Phone-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="pqr" name="message" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </h1>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <b>QUICK LINKS</b>
+                    <br><br>
+                    <ul type="none">
+                        <li> > <a href="#home"> Home</a></li>
+                        <li> > <a href="#services-section"> Services</a></li>
+                        <li> > <a href="#client-section"> Clients</a></li>
+                        <li> > <a href="#contact"> Contact Us</a></li>
+                    </ul>
+                    
+                </div>
+                <div class="col-4">
+                    <b>QUICK LINKS</b>
+                    <br><br>
+                    <ul type="none">
+                        <li> > <a href="order_now_button/testing.html"> Order Now</a></li>
+                        <li> > <a href="login.html"> Login</a></li>
+                        <li> > <a href="signup.html"> Sign Up</a></li>
+                        <!-- <li> > <a href="#contact"> Contact Us</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <b>FOLLOW US . . .</b>
+                    <br><br>
+                    <ul type="none">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-messenger"></i>
+                        <i class="fab fa-whatsapp"></i>
+                        <i class="fas fa-envelope"></i>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="background-color: white;">
+        <div class="center">Copyright &copy; www.flatlinefoodcritic.com. All rights reserved!</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

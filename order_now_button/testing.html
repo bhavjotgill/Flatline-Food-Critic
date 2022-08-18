@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food items available</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ff9ce8e0cb.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <style>
+        section{
+            position: relative;
+
+            /* margin: -20px -10px -10px -10px; */
+        }
+        section::before{
+            content: "";
+            position: absolute;
+            top: -52px;
+            bottom: -8px;
+            left: -8px;
+            right: -8px;
+            z-index: -1;
+            background-image: url('bg.jpg');
+            opacity: 0.5;
+        }
+        .box{
+            display: flex;
+            margin-top: 20px;
+            /* align-items: center;
+            justify-content: center; */
+        }
+        img{
+            height: 280px;
+            width: 390px;
+            border-radius: 10px;
+            margin: 10px;
+            margin-right: 65px;
+        }
+        div{
+            /* display: flex; */
+            font-size: 45px;
+            /* font-weight: bold; */
+            font-family: 'Baloo Bhai 2', cursive;
+            color: black;
+        }
+        .text{
+            margin: -22px;
+        }
+        h1{
+            position: relative;
+            top: 17px;
+            left: -231px;
+            text-align: center;
+            font-size: 74px;
+            font-weight: bold;
+            font-family: 'Baloo Bhai 2', cursive;
+            margin-top: 2px;
+            margin-bottom: 49px;
+            
+        }
+        #logo{
+            position: relative;
+            top: 8px;
+            left: -196px;
+            border-radius: 16px;
+            width: 63px;
+            height: 63px;
+            margin: 5px 29px;
+            
+        }
+        p{
+            font-size: 20px;
+            color: #696666;
+            font-family: none;
+            font-weight: 600;
+        }
+        /* From here increment / decrement */
+        button{
+            width: 66px;
+            color: green;
+            background-color: #c1c1d8;
+            border-radius: 20px;
+        }
+        button:focus{
+            outline: none;
+        }
+
+        input{
+            width: 161px;
+            text-align: center;
+            background: rgb(247, 235, 236);
+            border-radius: 10px;
+        }
+        input,button{
+            border-style: hidden;
+        }
+        input:focus{
+            outline: none;
+        }
+        input::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div  class="container">
+        <div style="display: flex;">
+            <img src="logo.jpg" alt="logo/profile pic" id= "logo">
+        <h1>&emsp;&emsp;&emsp;Flatline Food Critic</h1>
+        </div>
+        <div class="box">
+            <img src="food_pics/biryani.jpg" alt="biryani">
+            <div>
+                Biryani <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star-half-alt fa-xs" style="color:gold"></i> <br>
+                <p>₹139</p>
+                <p>Amazing delecious Biryani available...</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement()">-</button>
+                <input type="number" placeholder="Add +" id="input" min="0">
+                <button type="button" onclick="increment()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/pizza.jpg" alt="pizza">
+            <div>
+                Pizza <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i> <br>
+                <p>₹561</p>
+                <p>Mushrooms, Onions, Black olives etc..</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement2()">-</button>
+                <input type="number" id="input2"placeholder="Add +" min="0">
+                <button type="button" onclick="increment2()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/paneertikka.jpg" alt="paneertikka">
+            <div>
+                Paneer Tikka <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star-half-alt fa-xs" style="color:gold"></i>
+                <i class="far fa-star fa-xs"></i> <br>
+                <p>₹386</p>
+                <p>Veg food without Paneer?  Literally....</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement3()">-</button>
+                <input type="number" placeholder="Add +" id="input3" min="0">
+                <button type="button" onclick="increment3()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/dal_makhni.jpg" alt="dal_makhni">
+            <div>
+                Dal Makhni <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i> <br>
+                <p>₹259</p>
+                <p>Har tha Sirra kraundi dal Makhni  .....</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement4()">-</button>
+                <input type="number" placeholder="Add +" id="input4" min="0">
+                <button type="button" onclick="increment4()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/soup.jpg" alt="soup">
+            <div>
+                Soup <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i> <br>
+                <p>₹189</p>
+                <p>Winters daily routine Have soup wipe.</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement5()">-</button>
+                <input type="number" placeholder="Add +" id="input5" min="0">
+                <button type="button" onclick="increment5()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/cake.jfif" alt="cake">
+            <div>
+                Cake <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i> <br>
+                <p>₹499</p>
+                <p>How can we go without this Birthday</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement6()">-</button>
+                <input type="number" placeholder="Add +" id="input6" min="0">
+                <button type="button" onclick="increment6()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/parantha.jpg" alt="parantha">
+            <div>
+                Parantha <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i> <br>
+                <p>₹35</p>
+                <p>Iss ch Punjabian di jaan ar jaan vasdi</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement7()">-</button>
+                <input type="number" placeholder="Add +" id="input7" min="0">
+                <button type="button" onclick="increment7()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/burger.jpg" alt="burger">
+            <div>
+                Burger <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i> <br>
+                <p>₹89</p>
+                <p>Snack a time is okay and keep fresh ...</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement8()">-</button>
+                <input type="number" placeholder="Add +" id="input8" min="0">
+                <button type="button" onclick="increment8()">+</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="food_pics/ice_cream.jpg" alt="ice_cream">
+            <div>
+                Ice Cream <br>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i>
+                <i class="fas fa-star fa-xs" style="color:gold"></i> <br>
+                <p>₹237</p>
+                <p>Desert is must after food & ice cream?</p>
+            </div>
+            <div>
+                <br>
+                <button type="button" onclick="decrement9()">-</button>
+                <input type="number" placeholder="Add +" id="input9" min="0">
+                <button type="button" onclick="increment9()">+</button>
+            </div>
+        </div>
+        <hr style="background-color: black;">
+        <p class="text-center" style="color: white; background-color: black;" >Go to main page <a href="../index.html">Click here</a></p>
+    </section>
+</body>
+</html>

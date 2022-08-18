@@ -1,0 +1,350 @@
+/* ideas: add dark mode in project  by doing bg color black in body & toogle jquery*/
+/* margin: auto; will work if display: block */
+/* margin:1px 2px 3px 4px  here (1px is top) (2px is right) (3px is bottom) (4px is left)*/
+/* &ensp=normal space character     &emsp= emphasize phase character*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navbar Section */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+#logo{
+    margin: 10px 30px;
+}
+#logo img{
+    border-radius: 16px;
+    height: 63px;
+    margin: 3px 7px;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+#navbar::before{    /*upper black bg bar*/
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    /* color: green; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;  /*remove underlines from li...... */
+    cursor: pointer;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* search bar */
+.search-bar{
+    position: relative;
+    right: -165px;
+    border-radius: 50px;
+    background-color: white;
+    margin: 20px;
+    padding: 6px;
+    text-align: center;
+    width: 249px;
+}
+
+#search-input{
+    border-style: hidden;
+    text-align: center;
+    width: 182px;
+    /* background-color: cyan; */
+}
+
+#search-input:focus{
+    outline: none;
+}
+
+#adjust{
+    position: relative;
+    bottom: 2px;
+    right: -320px;
+    color: white;
+    /* background-color: black; */
+    /* border-radius: 100px; */
+    padding: 11px;
+    cursor: pointer;
+}
+#adjust:hover{
+    color: black;
+    background-color: white;
+    border-radius: 18px;
+}
+#right-bt{
+    position: relative;
+    top: 5px;
+    right: -331px;
+}
+/*#right-buttons{
+    position: absolute;
+    right: 0px;
+}
+ .bt1{
+    padding: 0px 11px;
+    background-color: white;
+    margin: 2px;
+    font-size: 1.5rem;
+    border-radius: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bt1 a{
+    color: blue;
+}
+.bt1 a:hover{
+    color: red;
+    text-decoration: none;
+} */
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 204px;
+    height: 460px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url('5.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 76%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.9;
+}
+/* Animation on h1 */
+.color-change{
+    animation: color-change 1.5s infinite;
+}
+@keyframes color-change{
+    0%{color: white;}
+    25%{color: cyan;}
+    50%{color: pink;}
+    100%{color: rgb(199, 199, 73);}
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+#home p{
+    color: orange;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* Services Section */
+#services-section h1{
+    height: 70px;
+    margin-top: 20px;
+}
+#services{
+    margin: 35px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 24px;
+    margin: 26px 50px;
+    border-radius: 25px;
+    background-color: #d0cbcf;
+    /* margin-bottom: 0px; */
+}
+#services .box img{
+    height: 158px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Baloo Bhai 2', cursive;
+    /* font-size: 1rem; */
+}
+
+/* Client Section */
+#client-section{
+    height: 500px;
+    position: relative;
+    z-index: -1;
+}
+#client-section::before{
+    content: "";
+    background: url('sponsers OR clients/client_bg.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+/* clients in line1 */
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 25px;
+}
+#clients img{
+    height: 112px;
+}
+/* clients in line2 i.e. zomato Mcd swiggy */
+#clients2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client2-item{
+    padding: 55px;
+}
+#clients2 img{
+    height: 112px;
+}
+
+/* Contact Us Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    background: url('contact.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+}
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#contact-box form{
+    width: 60%;
+}
+#contact-box label{
+    font-size: 1.25rem;
+    font-family: 'Baloo Bhai 2', cursive; 
+}
+
+/* Footer Section */
+footer{
+    background: #313030;
+    color: white;
+    padding: 9px 20px;
+}
+footer a{
+    color:white
+}
+footer a:hover{
+    color: chartreuse;
+}
+footer i{
+    padding: 3px;
+}
+footer i:hover{
+    color: skyblue;
+}
+/* .fa-instagram, .fa-facebook-square{
+    color: white;
+} */
+
+/* Other things */
+.h-primary{
+    font-size: 4rem;
+    padding: 15px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.h-secondary{
+    font-size: 2.5rem;
+    padding: 15px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.bt{
+    padding: 6px 22px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 15px;
+    font-size: 1.5rem;
+    border-radius: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bt:focus{
+    outline: none;
+}
+.bt:hover{
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/* BOOTSTRAP */
+/* carousel full-width */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+/* Jquery Toggle */
+.dark1{
+    background-color: black;
+    border-radius: 20px;
+}
+.dark2::placeholder{
+    color: white;
+}
+.dark3{
+    color: white;
+}
+.dark4{
+    color: black;
+}
+.dark5:focus{
+    color: chartreuse;
+}
+.dark6{
+    color: orangered;
+}
